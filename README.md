@@ -20,18 +20,19 @@ $ npm install
 1. Clone this repository
 ```bash
 # development
-$ git clone https://github.com/your-username/media-api.git
+$ git clone https://github.com/olaitankareem01/Stereopay-Assessment.git
 
 ```
+2. Create a database in mysql
 
-2. Install dependencies
+3. Install dependencies
 ```bash
 # development
 $ cd stereo-pay
 $ npm install
 
 ```
-3. Create a .env file in the root of the project and add the following environment variables:
+4. Create a .env file in the root of the project and add the following environment variables:
 
 ```bash
 # development
@@ -242,8 +243,34 @@ id: id of the media to be fetched
 
 Request Body:
 
+```bash
+{
+    "name":"music",
+    "description":"afro beat music",
+    "url":"music.com",
+    "type":"audio",
+    "status":"active"
+
+}
+
+```
+
 Response:
 ```bash
-
+{
+    "status": "success",
+    "message": "Media updated successfully",
+    "data": {
+        "id": "81c7e414-a3de-48a0-9fd9-4a033a375c52",
+        "name": "music",
+        "description": "afro beat music",
+        "url": "music.com",
+        "type": "audio",
+        "status": "active",
+        "createdAt": "2023-03-18T21:18:46.000Z",
+        "updatedAt": "2023-03-19T08:01:36.198Z",
+        "deletedAt": "2023-03-18T21:18:46.000Z"
+    }
+}
 
 ```
